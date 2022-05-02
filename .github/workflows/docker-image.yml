@@ -42,4 +42,4 @@ jobs:
         run: docker-compose up -d 
       - name: Run lint
         working-directory: ./aplicacao
-        run: docker exec web bash -c "gem install rubocop; rubocop -A --fail-level F"
+        run: docker-compose run app bash -c "gem install rubocop; rubocop -A --fail-level F"
